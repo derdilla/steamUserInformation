@@ -56,7 +56,7 @@ class SteamApiConnector:
         return response_data['response']
 
     def get_player_summaries(self, steamids: list[str]) -> list[PlayerInfo]:
-        url = f'https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/?key={self.key}&steamids={steamids}'
+        url = f'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/?key={self.key}&steamids={steamids}'
         response = requests.get(url).content
         response_data = json.loads(response)
         return response_data['response']['players']
