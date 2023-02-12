@@ -5,9 +5,9 @@ import json
 
 class PlayedGame(typing.TypedDict):
     appid: int
-    name: str  # name of the app
+    name: typing.Optional[str]  # name of the app
     playtime_forever: int  # minutes
-    img_icon_url: str
+    img_icon_url: typing.Optional[str]
     playtime_windows_forever: int  # minutes
     playtime_mac_forever: int  # minutes
     playtime_linux_forever: int  # minutes
